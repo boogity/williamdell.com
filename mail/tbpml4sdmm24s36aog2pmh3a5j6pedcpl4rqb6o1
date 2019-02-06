@@ -1,0 +1,188 @@
+Return-Path: <010001662d671f6a-b14a051a-3acc-484e-9974-b03c18534fab-000000@bounces.certificates.amazon.com>
+Received: from a11-19.smtp-out.amazonses.com (a11-19.smtp-out.amazonses.com [54.240.11.19])
+ by inbound-smtp.us-east-1.amazonaws.com with SMTP id tbpml4sdmm24s36aog2pmh3a5j6pedcpl4rqb6o1
+ for administrator@williamdell.com;
+ Mon, 01 Oct 2018 02:13:45 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of bounces.certificates.amazon.com designates 54.240.11.19 as permitted sender) client-ip=54.240.11.19; envelope-from=010001662d671f6a-b14a051a-3acc-484e-9974-b03c18534fab-000000@bounces.certificates.amazon.com; helo=a11-19.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of bounces.certificates.amazon.com designates 54.240.11.19 as permitted sender) client-ip=54.240.11.19; envelope-from=010001662d671f6a-b14a051a-3acc-484e-9974-b03c18534fab-000000@bounces.certificates.amazon.com; helo=a11-19.smtp-out.amazonses.com;
+ dkim=pass header.i=@amazonses.com;
+ dkim=pass header.i=@certificates.amazon.com;
+ dmarc=pass header.from=certificates.amazon.com;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGazRyT0ZLYXBOdlpGbVhaYTB3dDBzL1lqQUN2TGlYaCtuRjQrTlMrLzIyMWhRVFFBT3NiTDNtQVVWUXpBZUQrZjg3VkxSTkl1Tm5DV2l0OENIaWVDSTd4ZFNkZE1SV3NkNGJiOThUSUZ5U2ovYm55VFl4WlErWDFLanZZeXRRaHdTYUJpYTN6WEw2eHNmQ3gwQkVkM0JxaVF2MmwzaVkzQmZpbksyTVBnWE1IeW5taTVITVdaSy84Smx0SGlXOThSc3laUXNSeks3NHRMbGhQS3pDVjBGdngrM0VCckhDb3plNGxvdU82TGl1UjZnN2dxcm52MGxOcFcvTjlTUTV5NjlBNkhBNEpSYnFxNWI4eEhhWTMwQ3VYNDZONGQwZEl1bDNteVowdzkxQUZvZk00dmlqdUJoQVV1Q0RWaWJzTWlOZG5iVWYxbUYrYlYwemozSjVPZkpodEwzeThvZnBuZlQ5TU43NWZjbS96VFpDam9DWjdZRGRFMHJmUnJCQ2QwPQ==
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=LbAixisXGc8AUVNURJJmdbZtPp2NBqblVg5TeHjGvPgXzWlBG8NYRqXoCoJhXSb1/ieuVw1yygCUe9Omw39bjK4fXpha5yvjyHtnLoiuLGLbuue6s7T9PhN8M/cKNQFyK8tLUaijBJafPwoGmuXhthzi6ufp6k4fGVCMDUyfLVY=; c=relaxed/simple; s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1538360025; v=1; bh=dd2v1WyDNTkFRAzT6+wQLypZCva4UzaW4br4rwaEBXg=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=4gr7mefqxlwesfigzhw7tefd3g3j42vd; d=certificates.amazon.com;
+	t=1538360025;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+	bh=dd2v1WyDNTkFRAzT6+wQLypZCva4UzaW4br4rwaEBXg=;
+	b=fiB0yUesZjG6hmf1ZbVX4VcCwLXXQaThQ5mieOBH3TjIO75eCzYQesdGptg5wzef
+	tbyKAreaqzJyePaiQQJPLBlUhv00V3DYn0o3MSPAMhpzZPGx9qi3dA449C9uLqNj5HB
+	TK9FiwI106/zk3B/FDYUBqDoB5YAzSCPB+askhqg=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1538360025;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:Feedback-ID;
+	bh=dd2v1WyDNTkFRAzT6+wQLypZCva4UzaW4br4rwaEBXg=;
+	b=R1NqdWT6ScwWhlLEtpZHmoAmAR67XyOHO/cmZ9OYPxknKJVmK/BGOqcaueeuMuDC
+	TLkHRakhc36AVlw2STKtJmeVWhzJHeh6116O9BXO5p0M3iHgZFSS9aVt4lghUNY4hZa
+	Q8lRgEPQtLelfNqKJioVaOA0GGleIzOilrph3MJw=
+Date: Mon, 1 Oct 2018 02:13:44 +0000
+From: Amazon Certificates <no-reply@certificates.amazon.com>
+To: administrator@williamdell.com
+Message-ID: <010001662d671f6a-b14a051a-3acc-484e-9974-b03c18534fab-000000@email.amazonses.com>
+Subject: Certificate approval for williamdell.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2456392_497130691.1538360025008"
+X-SES-Outgoing: 2018.10.01-54.240.11.19
+Feedback-ID: 1.us-east-1.Z2tzV9jDOxElQcdHBxcESSDNQ/wayIy/uC/Gr3Qjgew=:AmazonSES
+
+------=_Part_2456392_497130691.1538360025008
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Greetings from Amazon Web Services,
+ 
+We received a request to issue an SSL/TLS certificate for williamdell.com.
+ 
+Verify that the following domain, AWS account ID, and certificate identifier
+correspond to a request from you or someone in your organization.
+ 
+Domain: williamdell.com
+AWS account ID: 8931-2213-3886
+AWS Region name: us-east-1
+Certificate identifier: 65636eb5-fd19-48b5-849e-4c1a898166d4
+ 
+To approve this request, go to Amazon Certificate Approvals at
+https://us-east-1.certificates.amazon.com/approvals?code=86c5ed4a-3606-4d64-9f03-9677ebd95c6f&context=3d6c5ab2-5562-4618-a205-59000a3146f2-75732d656173742d31
+and follow the instructions on the page.
+ 
+If you choose not to approve this request, you do not need to do anything.
+ 
+This email is intended solely for authorized individuals for williamdell.com.
+To express any concerns about this email or if this email has reached you in
+error, forward it along with a brief explanation of your concern to
+validation-questions@amazon.com.
+ 
+Sincerely,
+Amazon Web Services
+ 
+--
+Amazon Web Services, Inc. is a subsidiary of Amazon.com, Inc. Amazon.com is a
+registered trademark of Amazon.com, Inc.
+ 
+This message produced and distributed by Amazon Web Services, Inc.,
+410 Terry Ave. North, Seattle, WA 98109-5210.
+ 
+(c)2015, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+Our privacy policy is posted at https://aws.amazon.com/privacy
+
+------=_Part_2456392_497130691.1538360025008
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+        <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+" />
+    <title>Domain Validation</title>
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0" />
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />
+    <style type=3D"text/css">
+      @media only screen and (max-width:460px){                 body[yahoo]=
+ table {width:100% !important;}                      body[yahoo] marginAl {=
+width:15px !important;}                   body[yahoo] .socialContainer {tex=
+t-align:center;}                       body[yahoo] .socialPod {display:inli=
+ne-block;width:18%;text-align:center;}                      body[yahoo] .so=
+cialDivider {display:inline-block;width:7%;}                     body[yahoo=
+] .imageStr {width:100% !important;}                  body[yahoo] .disAppea=
+r {display:none !important;}                        !important;background-r=
+epeat: no-repeat !important;background-position: center !important;width:32=
+0px !important;height:120px !important;}                     }
+    </style>
+  </head>
+  <body yahoo=3D"fix" style=3D"margin-top:0;margin-bottom:0;margin-left:0;m=
+argin-right:0;">
+    <div>
+      <table style=3D"background-color:#F8F8F8;" bgcolor=3D"#F8F8F8" width=
+=3D"100%" align=3D"center" cellspacing=3D"0" cellpadding=3D"0"><tr><td>
+              <br/><table style=3D"font-family: arial, helvetica, sans-seri=
+f; font-size:14px; line-height:20px; background-color: #FFFFFF; font-color:=
+black;border-top:1px solid #e8e8e8;border-right:1px solid #e8e8e8;border-bo=
+ttom:1px solid #e8e8e8;border-left:1px solid #e8e8e8;" align=3D"center" bgc=
+olor=3D"#ffffff" cellspacing=3D"0" cellpadding=3D"0" width=3D"600" itemscop=
+e itemtype=3D"EmailMessage"><meta itemprop=3D"description" content=3D"Appro=
+ve certificate for williamdell.com"/>
+                  <tr>
+                    <td width=3D"30" class=3D"marginAl">
+                      <img style=3D"display: block;" src=3D"https://certifi=
+cates.amazon.com/images/spacer.gif" border=3D"0" alt=3D"" width=3D"30" heig=
+ht=3D"1" class=3D"marginAl"/>
+                    </td>
+                    <td style=3D"font-family: arial, helvetica, sans-serif;=
+ font-size:14px; line-height:20px;">
+                      <p itemprop=3D"publisher" itemscope itemtype=3D"http:=
+//schema.org/Organization"><a itemprop=3D"url" href=3D"https://aws.amazon.c=
+om/"><img src=3D"https://certificates.amazon.com/aws-email-logo.png" alt=3D=
+"Amazon Web Services"/></a><meta itemprop=3D"name" content=3D"Amazon Web Se=
+rvices"/></p>
+                      <p>Greetings from Amazon Web Services,</p>
+                      <p>We received a request to issue an SSL/TLS certific=
+ate for <b><span id=3D"requested_domain">williamdell.com</span></b>.</p>
+                      <p>Verify that the following domain, AWS account ID, =
+and certificate identifier correspond to a request from you or someone in y=
+our organization.</p>
+                      <p>Domain: <b><span id=3D"fqdn">williamdell.com</span=
+></b><br/>AWS account ID: <b><span id=3D"account_id">8931-2213-3886</span><=
+/b><br/>AWS Region name: <b><span id=3D=E2=80=9Cregion_name=E2=80=9D>us-eas=
+t-1</span></b><br/>Certificate identifier: <b><span id=3D"cert_id">65636eb5=
+-fd19-48b5-849e-4c1a898166d4</span></b></p>
+                      <p itemprop=3D"potentialAction" itemscope itemtype=3D=
+"http://schema.org/ViewAction">To approve this request, go to <b><a itempro=
+p=3D"url" id=3D"approval_url" href=3D"https://us-east-1.certificates.amazon=
+.com/approvals?code=3D86c5ed4a-3606-4d64-9f03-9677ebd95c6f&amp;context=3D3d=
+6c5ab2-5562-4618-a205-59000a3146f2-75732d656173742d31">Amazon Certificate A=
+pprovals</a></b> ( https://us-east-1.certificates.amazon.com/approvals?code=
+=3D86c5ed4a-3606-4d64-9f03-9677ebd95c6f&amp;context=3D3d6c5ab2-5562-4618-a2=
+05-59000a3146f2-75732d656173742d31 ) and follow the instructions on the pag=
+e.<meta itemprop=3D"name" content=3D"Approve Certificate"/></p>
+                      <p>If you choose not to approve this request, you do =
+not need to do anything.</p>
+                      <p><i>This email is intended solely for authorized in=
+dividuals for williamdell.com. To express any concerns about this email or =
+if this email has reached you in error, forward it along with a brief expla=
+nation of your concern to <a href=3D"mailto:validation-questions@amazon.com=
+">validation-questions@amazon.com</a>.</i></p>
+                      <p>Sincerely,<br/>Amazon Web Services</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width=3D"30" class=3D"marginAl">
+                      <img style=3D"display: block;" src=3D"https://certifi=
+cates.amazon.com/images/spacer.gif" border=3D"0" alt=3D"" width=3D"30" heig=
+ht=3D"1" class=3D"marginAl"/>
+                    </td>
+                    <td align=3D"left">
+                      <p style=3D"font-size:9px; color:#999; line-height:12=
+px; margin-top:0px; text-align:left; font-family:Arial, Helvetica, sans-ser=
+if;" align=3D"left"><br/>Amazon Web Services, Inc. is a subsidiary of Amazo=
+n.com, Inc. Amazon.com is a registered trademark of Amazon.com, Inc.<br/><b=
+r/>This message produced and distributed by Amazon Web Services, Inc., 410 =
+Terry Ave. North, Seattle, WA 98109-5210.<br/><br/>&copy;2015, Amazon Web S=
+ervices, Inc. or its affiliates. All rights reserved. View our <a style=3D"=
+color: #787878; text-decoration: none;" href=3D"https://aws.amazon.com/priv=
+acy/">privacy policy</a>.</p>
+                    </td>
+                  </tr>
+                </table><br/>
+              </td></tr></table>
+      </div>
+  </body>
+</html>
+
+------=_Part_2456392_497130691.1538360025008--
